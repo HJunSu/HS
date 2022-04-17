@@ -1,0 +1,27 @@
+#탭 화면 만들기
+
+
+#2019038081_황준수
+from tkinter import*
+from tkinter import ttk
+
+window = Tk()
+
+baseTab = ttk.Notebook(window)
+
+tabDog = ttk.Frame(baseTab)
+baseTab.add(tabDog, text='강아지')
+tabCat = ttk.Frame(baseTab)
+baseTab.add(tabCat, text='고양이')
+
+baseTab.pack(expand =1, fill="both")
+
+photoDog = PhotoImage(file = r"C:\Users\tnwns\OneDrive\바탕 화면\파이썬\강의자료\source\GIF\dog7.gif")
+labelDog = Label(tabDog, image = photoDog)
+labelDog.pack()
+
+photoCat = PhotoImage(file = r"C:\Users\tnwns\OneDrive\바탕 화면\파이썬\강의자료\source\GIF\cat5.gif" )
+labelCat = Label(tabCat, image = photoCat)
+labelCat.pack()
+
+window.mainloop()
